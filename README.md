@@ -23,6 +23,7 @@ Get started with RabbitMQ, a message broker, that enables multiple processes to 
 1. Run about.py.
 1. Read about.txt. 
 1. Verfiy you have exactly one active, one None env.
+-Confirmed.
 
 ## Version 1 - Execute the Producer/Sender
 
@@ -30,6 +31,7 @@ Get started with RabbitMQ, a message broker, that enables multiple processes to 
 1. Run the file. 
 
 You'll need to fix an error in the program to get it to run.
+-Corrected.
 Once it runs and finishes, we can reuse the terminal.
 
 ## Version 1 - Execute the Consumer/Listener
@@ -38,7 +40,9 @@ Once it runs and finishes, we can reuse the terminal.
 1. Run the file.
 
 You'll need to fix an error in the program to get it to run.
+-Corrected.
 Once it runs successfully, will it terminate on its own? How do you know? 
+-It did not, continued to wait for new messages each time.
 As long as the process is running, we cannot use this terminal for other commands. 
 
 ## Version 1 - Open a New Terminal / Emit More Messages
@@ -49,6 +53,9 @@ As long as the process is running, we cannot use this terminal for other command
 1. Execute the script. 
 1. Watch what happens in the listening window.
 1. Do this several times to emit at least 3 different messages.
+-My name is Alexis
+-My son's name is Makari
+-Today's date is 31Jan2023
 
 ## Version 1: Don't Repeat Yourself (DRY)
 
@@ -61,7 +68,8 @@ As long as the process is running, we cannot use this terminal for other command
 
 To send a new message, you'll only make one change.
 Updating and improving code is called 'refactoring'. 
-Use your skills to keep coding enjoyable. 
+Use your skills to keep coding enjoyable.
+-Updated to 'Message' rather than description. 
 
 ## Version 2
 
@@ -71,7 +79,10 @@ and a consistent, reusable approach to building code.
 
 Each of the version 2 programs include an error as well. 
 
-1. Find the error and fix it. 
+1. Find the error and fix it.
+-emit error: additional 'l's in localhost
+-listen error: .decode() not required, additional 't's in localhost
+
 1. Compare the structure of the version 2 files. 
 1. Modify the docstrings on all your files.
 1. Include your name and the date.
@@ -83,8 +94,10 @@ Each of the version 2 programs include an error as well.
 1. A function may - or may not - return a value. 
 1. When we open a connection, we should close the connection. 
 1. Which of the 4 files will always close() the connection?
+-emit message files
 1. Search GitHub for if __name__ == "__main__":
 1. How many hits did you get? 
+-several thousand hits in commits, codes, issues, discussions, and wikis.
 1. Learn and understand this common Python idiom.
 
 ## Reference

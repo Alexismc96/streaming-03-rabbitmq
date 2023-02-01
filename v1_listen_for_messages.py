@@ -4,6 +4,10 @@ Always customize this docstring.
 
 Add your name, date, and a description of the program.
 
+Alexis Clinton
+31Jan2023
+Program is listening for messages sent by the emit message program code
+
 Listens for messages on the queue.
 This process runs continously. 
 
@@ -34,16 +38,16 @@ import pika, sys, os
 # define a main function to run the program
 def main():
     # create a blocking connection to the RabbitMQ server
-    connection = pika.BlockingConnection(pika.ConnectionParameters(host='LocalHostt'))
+    connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
     # use the connection to create a communication channel
     channel = connection.channel()
     # use the channel to declare a queue
     channel.queue_declare(queue='hello')
     # define a callback function to be called when a message is received
     def callback(ch, method, properties, body):
-        print(" [x] Received %r" % body.decode())
+        print(" [x] Received %r" % body)
     # use the channel to consume messages from the queue
-    channel.basic_consume(queue='hello', on_message_callback=callback, auto_ack=True)
+    channel.basic_consume(queue='Message', on_message_callback=callback, auto_ack=True)
     # print a message to the console for the user
     print(' [*] Waiting for messages. To exit press CTRL+C')
     # start consuming messages
