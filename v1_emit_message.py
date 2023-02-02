@@ -16,8 +16,8 @@ ch = conn.channel()
 # use the channel to declare a queue
 ch.queue_declare(queue="Message")
 # use the channel to publish a message to the queue
-ch.basic_publish(exchange="", routing_key="Message", body="Hello")
+ch.basic_publish(exchange="", routing_key="Message", body="Today's date is 31Jan2023")
 # print a message to the console for the user
-print(" [x] Sent 'Hello'")
+print(" [x] Sent 'Today's date is 31Jan2023'")
 # close the connection to the server
 conn.close()
